@@ -1,20 +1,49 @@
+# Laravel React Booking System
 
-Here's a sample README file for your project that explains how to set up, use, and understand the Laravel-React application with Shopify's Polaris UI components and the kyon147/laravel-shopify package.
+## Features
 
-Laravel React Booking System
-A simple booking system built with Laravel and React, using the Shopify Polaris UI library for React and the kyon147/laravel-shopify package for integrating with Shopify. The project allows users to book a service, view the list of bookings, and manage their booking data.
+- **Service Booking**: Users can book a service by filling out a form with their name, email, and the type of service they require.
+- **View Booked Services**: Admin or users can view a table listing all booked services.
+- **Shopify Polaris UI**: The project uses Shopify Polaris React components for a consistent and modern user interface.
+- **Integrated with Shopify**: Uses the `kyon147/laravel-shopify` package for integrating with the Shopify API for service bookings.
 
-Features
-Booking Service: Users can fill out a form to book a service, selecting a service type, entering their name and email.
-Service List: A data table displays the list of booked services.
-Shopify Polaris UI: The project uses the Shopify Polaris UI components to style and manage the layout.
-Installation
-Follow these steps to set up the Laravel-React application locally.
+## Installation
 
-1. Clone the repository
+### Clone the Repository
+
 Clone this repository to your local machine:
 
-bash
-Copy code
-git clone https://github.com/yourusername/laravel-react-booking.git
-cd laravel-react-booking
+```bash
+git clone https://github.com/sorwar-klinkode/example.git
+cd example
+```
+
+### Set Up the .env File
+
+Copy the `.env.example` to `.env` and configure your database and environment variables:
+
+```bash
+cp .env.example .env
+```
+
+Then, open the `.env` file and make sure you configure the necessary environment variables for your database and other settings.
+
+### Run Migrations
+
+To set up the database schema, run the following command:
+
+```bash
+php artisan migrate
+```
+
+This will run the Laravel migrations and create the necessary tables.
+
+### Start the Laravel Server
+
+Now, start the Laravel development server:
+
+```bash
+php artisan serve
+```
+
+This will start the backend at [http://localhost:8000](http://localhost:8000).
