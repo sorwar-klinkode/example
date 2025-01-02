@@ -1,11 +1,13 @@
 import { Button, Form, FormLayout, Page, Select, TextField } from '@shopify/polaris';
 import { useCallback, useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const BookService = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
-    const [serviceType, setServiceType] = useState('today');
+    const [serviceType, setServiceType] = useState('web development');
+    const navigate = useNavigate();
 
     const handleSelectChange = useCallback(
         (value) => setServiceType(value),
@@ -29,6 +31,7 @@ const BookService = () => {
         axios.post('/api/booking', data)
             .then((response) => {
                 console.log('Success:', response.data);
+                navigate('/');
             })
             .catch((error) => {
                 console.error('Error:', error.response ? error.response.data : error.message);
