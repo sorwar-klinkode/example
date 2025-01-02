@@ -40,7 +40,7 @@ const BookService = () => {
 
     return (
         <Page>
-            <Form onSubmit={handleSubmit}>
+            <form data-save-bar onSubmit={handleSubmit}>
                 <FormLayout>
                     <TextField
                         onChange={(value) => setName(value)}
@@ -65,7 +65,7 @@ const BookService = () => {
                         Submit
                     </Button>
                 </FormLayout>
-            </Form>
+            </form>
         </Page>
     );
 };
